@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 HOST = "localhost"
 PORT = 9999
 ADDRESS_TUPLE = (HOST, PORT)
-FILE_NAME_TASKS = "tasks.csv"
+FILE_NAME_TASKS = "smoker-temps.csv"
 SHOW_OFFER = True # True to  offer offer, False to not show offer
 
 #Set to automatically open offer
@@ -91,5 +91,5 @@ if __name__ == "__main__":
     tasks = read_from_file(FILE_NAME_TASKS)
 
     for task in tasks:
-        send_message("localhost", "task_queue3", task)
+        send_message("localhost", "task_queue1", task)
         logger.info(f"Sent: {task} to RabbitMQ.")
