@@ -3,7 +3,7 @@
     Start multiple versions to add more workers.  
 
   Author: Mike Abbinante
-    Date: 15Sep23
+    Date: 20Sep23
 
 """
 #Imported Modules
@@ -86,7 +86,7 @@ def main(hn: str = "localhost", qn: str = "task_queue"):
         print(" User interrupted continuous listening process.")
         sys.exit(0)
     finally:
-        print("\nClosing connection. Goodbye.\n")
+        print("\nClosing connection.\n")
         connection.close()
 
 
@@ -96,4 +96,4 @@ def main(hn: str = "localhost", qn: str = "task_queue"):
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":
     # call the main function with the information needed
-    main("localhost", "task_queue1")
+    main("localhost", "01-smoker","02-food-A","03-food-B")
